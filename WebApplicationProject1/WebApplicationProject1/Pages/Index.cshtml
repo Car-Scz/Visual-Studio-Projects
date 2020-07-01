@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+ </div>
+
+<button class="block-btn" onclick="myFunction()">Click me and check out this video</button>
+
+<div id="myDIV">
+    <iframe src="https://www.youtube.com/embed/AbtJkupF3SE" frameborder="0" allow="autoplay" title="Cat Man Do">
+    </iframe>
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
